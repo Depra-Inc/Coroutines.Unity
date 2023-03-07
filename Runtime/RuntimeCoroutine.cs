@@ -1,31 +1,25 @@
-﻿using System.Collections;
+﻿using Depra.Coroutines.Domain.Entities;
 using UnityEngine;
 
-namespace Depra.Coroutines.Runtime
+namespace Depra.Coroutines.Unity.Runtime
 {
-    public sealed class RuntimeCoroutine : ICoroutine
+    public sealed class RuntimeCoroutine : ICoroutine 
     {
         private readonly RuntimeCoroutineHost _host;
+        
         private Coroutine _coroutine;
 
-        public RuntimeCoroutine(RuntimeCoroutineHost host, IEnumerator enumerator)
+        public RuntimeCoroutine(RuntimeCoroutineHost host, Coroutine coroutine)
         {
             _host = host;
-            Enumerator = enumerator;
+            _coroutine = coroutine;
         }
-
-        public IEnumerator Enumerator { get; }
-
-        public bool Done => _coroutine == null;
-
-        public void Start()
-        {
-            _coroutine = _host.StartCoroutineInternal(Enumerator);
-        }
-
+        
+        public bool IsDone => _coroutine == null;
+        
         public void Stop()
         {
-            if (Done)
+            if (IsDone)
             {
                 return;
             }

@@ -1,28 +1,20 @@
-﻿using System.Collections;
-using Depra.Coroutines.Runtime;
+﻿using Depra.Coroutines.Domain.Entities;
 using Unity.EditorCoroutines.Editor;
 
-namespace Depra.Coroutines.Editor
+namespace Depra.Coroutines.Unity.Editor
 {
-    public sealed class EditorCoroutineProxy : ICoroutine
+    public sealed class EditorCoroutineProxy : ICoroutine 
     {
         private EditorCoroutine _coroutine;
 
-        public EditorCoroutineProxy(IEnumerator enumerator) =>
-            Enumerator = enumerator;
-
-        public IEnumerator Enumerator { get; }
-
-        public bool Done => _coroutine == null;
-
-        public void Start()
-        {
-            _coroutine = EditorCoroutineUtility.StartCoroutine(Enumerator, this);
-        }
-
+        public EditorCoroutineProxy(EditorCoroutine coroutine) => 
+	        _coroutine = coroutine;
+        
+        public bool IsDone => _coroutine == null;
+        
         public void Stop()
         {
-            if (Done)
+            if (IsDone)
             {
                 return;
             }

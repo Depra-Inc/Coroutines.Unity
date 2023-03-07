@@ -1,21 +1,17 @@
 ﻿using System.Collections;
+using Depra.Coroutines.Domain.Entities;
 using UnityEngine;
 
-namespace Depra.Coroutines.Runtime
+namespace Depra.Coroutines.Unity.Runtime
 {
     public sealed class RuntimeCoroutineHost : MonoBehaviour, ICoroutineHost
     {
-        public new ICoroutine StartCoroutine(IEnumerator coroutine)
+        public new ICoroutine StartCoroutine(IEnumerator process)
         {
-            var coroutineProxy = new RuntimeCoroutine(this, coroutine);
-            coroutineProxy.Start();
-            return coroutineProxy;
+	        var coroutine = base.StartCoroutine(process);
+	        return new RuntimeCoroutine(this, coroutine);
         }
 
-        public void StopCoroutine(ICoroutine coroutine) => 
-            coroutine.Stop();
-
-        internal Coroutine StartCoroutineInternal(IEnumerator enumerator) => 
-            base.StartCoroutine(enumerator);
+        public void StopCoroutine(ICoroutine coroutine) => coroutine.Stop();
     }
 }
