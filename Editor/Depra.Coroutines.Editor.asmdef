@@ -1,0 +1,19 @@
+{
+    "name": "Depra.Coroutines.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d9fc9b62b1d439949a885ee8b6ead17a",
+        "GUID:478a2357cc57436488a56e564b08d223"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
