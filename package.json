@@ -1,0 +1,21 @@
+{
+  "name": "com.depra.coroutines.unity",
+  "displayName": "Depra.Coroutines.Unity",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "hideInEditor": false,
+  "keywords": [
+    "Depra",
+    "Coroutines",
+    "Unity",
+    "Runtime",
+    "Process",
+    "Helpers",
+    "Utils",
+    "Utilities"
+  ],
+  "license": "Apache-2.0",
+  "description": "Contains proxies for UnityEngine.Coroutine and Unity.EditorCoroutine.Editor.EditorCoroutine.",
+  "type": "module",
+  "unityRelease": "16f1"
+}
