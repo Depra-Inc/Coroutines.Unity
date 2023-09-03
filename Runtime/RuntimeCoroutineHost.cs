@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
+// SPDX-License-Identifier: Apache-2.0
+
+using System.Collections;
 using Depra.Coroutines.Domain.Entities;
 using UnityEngine;
 
-namespace Depra.Coroutines.Unity.Runtime
+namespace Depra.Coroutines.Runtime
 {
 	public sealed class RuntimeCoroutineHost : MonoBehaviour, ICoroutineHost
 	{
