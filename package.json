@@ -15,6 +15,9 @@
 		"Utils",
 		"Utilities"
 	],
+	"dependencies": {
+		"com.unity.editorcoroutines": "1.0.0"
+	},
 	"author": {
 		"name": "Depra, Inc.",
 		"email": "n.melnikov@depra.org",
