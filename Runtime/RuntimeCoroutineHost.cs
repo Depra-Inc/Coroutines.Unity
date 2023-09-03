@@ -1,8 +1,8 @@
-﻿// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
-// SPDX-License-Identifier: Apache-2.0
+﻿// SPDX-License-Identifier: Apache-2.0
+// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System.Collections;
-using Depra.Coroutines.Domain.Entities;
+using Depra.Coroutines.Entities;
 using UnityEngine;
 
 namespace Depra.Coroutines.Runtime

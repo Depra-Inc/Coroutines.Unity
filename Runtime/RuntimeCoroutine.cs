@@ -1,8 +1,8 @@
-﻿// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
-// SPDX-License-Identifier: Apache-2.0
+﻿// SPDX-License-Identifier: Apache-2.0
+// © 2023 Nikolay Melnikov <n.melnikov@depra.org>
 
 using System;
-using Depra.Coroutines.Domain.Entities;
+using Depra.Coroutines.Entities;
 using UnityEngine;
 
 namespace Depra.Coroutines.Runtime
@@ -10,7 +10,6 @@ namespace Depra.Coroutines.Runtime
 	public sealed class RuntimeCoroutine : ICoroutine
 	{
 		private readonly RuntimeCoroutineHost _host;
-
 		private Coroutine _coroutine;
 
 		public RuntimeCoroutine(RuntimeCoroutineHost host, Coroutine coroutine)
